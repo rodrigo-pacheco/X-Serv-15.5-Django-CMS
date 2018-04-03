@@ -7,4 +7,5 @@ urlpatterns = patterns('',
     # url(r'^blog/', include('blog.urls')),
 
     url(r'^admin/', include(admin.site.urls)),
+    url(r'(.*)', 'cms.views.content', name="Pedir algo a ver si esta en la cache"),
 )
