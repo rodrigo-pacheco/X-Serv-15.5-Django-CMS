@@ -1,7 +1,6 @@
 from django.shortcuts import render
 from cms.models import Pages
 from django.http import HttpResponse
-from django.http import HttpResponseRedirect
 from django.core.exceptions import ObjectDoesNotExist
 
 # Create your views here.
@@ -17,7 +16,7 @@ def slash(self):
 def number(self, num):
     try:
         Page = Pages.objects.get(id=str(num))
-        return(HttpResponse(Page.page)
+        return(HttpResponse(Page.page))
 
 
 def notfound(self):
