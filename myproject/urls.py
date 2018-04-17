@@ -9,6 +9,5 @@ urlpatterns = patterns('',
     url(r'^admin/', include(admin.site.urls)),
     url(r'^$', 'acorta.views.slash'),
     url(r'^(\d+)$', 'acorta.views.number'),
-    url(r'(.*)', 'cms.views.content'),
     url(r'.*', 'acorta.views.notfound'),
 )
