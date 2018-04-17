@@ -7,5 +7,8 @@ urlpatterns = patterns('',
     # url(r'^blog/', include('blog.urls')),
 
     url(r'^admin/', include(admin.site.urls)),
-    url(r'(.*)', 'cms.views.content', name="Pedir algo a ver si esta en la cache"),
+    url(r'^$', 'acorta.views.slash'),
+    url(r'^(\d+)$', 'acorta.views.number'),
+    url(r'(.*)', 'cms.views.content'),
+    url(r'.*', 'acorta.views.notfound'),
 )
